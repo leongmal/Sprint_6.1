@@ -5,7 +5,6 @@ class ElementFormRegisration:
     """Локаторы элементов для формы оформления заказа"""
 
     """ Элементы главной страницы """
-    # UPPER_ORDER_BUTTON = (By.CLASS_NAME, 'Button_Button__ra12g')  # Верхняя кнопка «Заказать»
     UPPER_ORDER_BUTTON = (By.XPATH, "//button[contains(@class, 'Button_Button') and text()='Заказать']")  # Верхняя кнопка «Заказать»
     COOCIE_BUTTON = (By.CLASS_NAME, 'App_CookieButton__3cvqF')  # Кнопка «Да, все привыкли» (куки)
     LOWER_ORDER_BUTTON = (By.CSS_SELECTOR, '.Button_Button__ra12g.Button_Middle__1CSJM')  # Нижняя кнопка «Заказать»
