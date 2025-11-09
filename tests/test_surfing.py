@@ -5,7 +5,6 @@ from locators.locator_order import ElementFormRegisration
 import allure
 
 
-
 class TestSurfing:
     @allure.description("Проверить: при клике на логотип Яндекса открывается страница Дзена в новой вкладке")
     def test_yandex_logo_opens_dzen(self,driver):
@@ -16,7 +15,6 @@ class TestSurfing:
         su.switch_to_new_tab()
         su.wait_for_load_page()
         su.get_dzen_url()
-
 
 
     @allure.description("Проверить: клик по логотипу Самоката ведёт на главную страницу Самоката")
