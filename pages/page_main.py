@@ -13,13 +13,12 @@ class MainPage(BasePage):
     def scroll_to_element(self, locator):
         self.wait_for_visibility(MainPageLocators.TITLE_IMPORTANT_QUESTIONS)
 
-    @allure.step('Ждём кликабельного состояния и кликаем элемент')
+    @allure.step('Кликаем вопрос ')
     def click_question(self, question_id):
         locator = MainPageLocators.get_question_locator(question_id)
-        element= self.wait_for_clickability(locator)
-        self.driver.execute_script("arguments[0].click();", element)
+        self.click_via_script(locator)
 
-    @allure.step('Ждём видимости ответа')
+    @allure.step('Получаем текст ответа на вопрос ')
     def get_answer_text(self, question_id):
         answer_locator = MainPageLocators.get_answer_locator(question_id)
-        return self.wait_for_visibility(answer_locator).text
+        return self.get_element_text(answer_locator)

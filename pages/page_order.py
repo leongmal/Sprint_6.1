@@ -1,10 +1,6 @@
-# from selenium.webdriver.support.wait import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# from selenium.webdriver.common.by import By
 from locators.locator_order import ElementFormRegisration, RegPage
 from selenium.webdriver.common.keys import Keys
 from pages.base_page import BasePage
-# from data import UserData, UserDataTwo
 import allure
 
 
@@ -16,7 +12,7 @@ class OrderAuthorization(BasePage):
 
     @allure.step('Клик по верхней кнопке "Заказать" (тип: {button_type})')
     def click_order_up_button(self, button_type='upper'):
-        locator = (ElementFormRegisration.UPPER_ORDER_BUTTON) 
+        locator = (ElementFormRegisration.UPPER_ORDER_BUTTON)
         self.wait_for_clickability(locator).click()
 
     def scroll_to_button(self):
@@ -25,7 +21,7 @@ class OrderAuthorization(BasePage):
     @allure.step('Клик по нижней кнопке "Заказать" (тип: {button_type})')
     def click_order_low_button(self, button_type='lower'):
         locator = (ElementFormRegisration.LOWER_ORDER_BUTTON)
-        self.wait_for_clickability(locator).click()    
+        self.wait_for_clickability(locator).click()
 
     @allure.step('Ввод имени: {name}')
     def input_name(self, name):
@@ -95,7 +91,3 @@ class OrderAuthorization(BasePage):
     def verify_confirmation_text(self, expected_text="Посмотреть статус"):
         actual_text = self.get_confirmation_text()
         assert actual_text == expected_text
-
-
-
-

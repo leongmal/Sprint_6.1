@@ -30,3 +30,17 @@ class BasePage:
         """Скроллим до элемента"""
         element = self.wait_for_visibility(locator)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+    def click_via_script(self, locator):
+        """Кликаем элемент через JavaScript (обход перекрывающих элементов)"""
+        element = self.wait_for_clickability(locator)
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def get_element_text(self, locator):
+        """Получаем текст элемента"""
+        element = self.wait_for_visibility(locator)
+        return element.text
+
+    def find_element(self, locator):
+        """Находим элемент (общий метод)"""
+        return self.driver.find_element(*locator)
