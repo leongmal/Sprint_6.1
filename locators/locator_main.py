@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
-# import pytest
-# from data import Urls
+
 
 class MainPageLocators:
     HOME_HEADER = (By.CLASS_NAME, "Home_Header__iJKdX")

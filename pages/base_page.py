@@ -31,10 +31,7 @@ class BasePage:
     def scroll_to_element(self, locator):
         """Прокручиваем до элемента"""
         element = self.wait_for_visibility(locator)
-        self.driver.execute_script(
-            "arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});",
-            element
-        )
+        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center', behavior: 'smooth'});",element)
 
     def click_via_script(self, locator):
         """Кликаем через JS"""

@@ -86,8 +86,3 @@ class OrderAuthorization(BasePage):
     @allure.step('Получение текста подтверждения заказа')
     def get_confirmation_text(self):
         return self.wait_for_visibility(ElementFormRegisration.VISUAL_STATUS).text
-
-    @allure.step('Сверка текста подтверждения с ожидаемым: {expected_text}')
-    def verify_confirmation_text(self, expected_text="Посмотреть статус"):
-        actual_text = self.get_confirmation_text()
-        assert actual_text == expected_text
