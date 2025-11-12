@@ -7,7 +7,7 @@
     Selenium для автоматизации браузера
     GeckoDriver последней версии / webgriver
     Firefox актуальной версии
-3.Необходимые установки:
+3.Необходимые установки :
 	pip install pytest
 	pip install selenium
     pip install -r requirements.txt
