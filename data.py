@@ -1,8 +1,6 @@
 class Urls:
     SCOOTER = "https://qa-scooter.praktikum-services.ru/"
     DZEN = 'dzen.ru'
-    REG_URL = "https://qa-scooter.praktikum-services.ru/order/"
-    # BASE_URL = "https://qa-scooter.praktikum-services.ru/"
 
 
 class UserData:
@@ -15,7 +13,6 @@ class UserData:
     date = '11.11.2025'
     comment = 'буду в костюме Рассомахи'
     rent = 'двое суток'
-
 
 
 
